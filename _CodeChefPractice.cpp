@@ -3,21 +3,16 @@
 using namespace std;
 int main()
 {
-    int t;
-    cin >> t;
-    for (int i = 0; i < t; i++)
+    int t[4], ans = 0;
+    for (int i = 0; i < 4; i++)
     {
-        int x, y, ans;
-        cin >> x >> y;
-        if (y <= x * 10)
+        cin >> t[i];
+        if (t[i] >= 10)
         {
-            cout << "cloth" << endl;
-        }
-        else
-        {
-            cout << "disposable\n";
+            ans++;
         }
     }
+    cout << ans << endl;
 
     return 0;
 }
