@@ -7,14 +7,13 @@ int main()
     cin >> t;
     for (int i = 0; i < t; i++)
     {
-        int mod, x, y, z;
-        double ans;
+        int x, y, z;
+        int ans;
         cin >> x >> y >> z;
         x *= 5;
         y *= 10;
-        mod = (x + y) % z;
-        ans = double(x + y) / z;
-        ans = floor(ans);
+        ans = (x + y) / z;
+
         cout << ans << endl;
     }
 
