@@ -7,17 +7,11 @@ int main()
     cin >> t;
     for (int i = 0; i < t; i++)
     {
-        int ans, k, x;
-        cin >> k >> x;
-        ans = k - x;
-        if (k < x)
-        {
-            break;
-        }
-        else
-        {
-            cout << ans << endl;
-        }
+        int x, ans;
+        ans = 100;
+        cin >> x;
+        ans -= x;
+        cout << ans << endl;
     }
 
     return 0;
