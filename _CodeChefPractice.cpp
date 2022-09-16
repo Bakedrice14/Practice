@@ -3,16 +3,20 @@
 using namespace std;
 int main()
 {
-    int t[4], ans = 0;
-    for (int i = 0; i < 4; i++)
+    int t;
+    cin >> t;
+    for (int i = 0; i < t; i++)
     {
-        cin >> t[i];
-        if (t[i] >= 10)
-        {
-            ans++;
-        }
+        int mod, x, y, z;
+        double ans;
+        cin >> x >> y >> z;
+        x *= 5;
+        y *= 10;
+        mod = (x + y) % z;
+        ans = double(x + y) / z;
+        ans = floor(ans);
+        cout << ans << endl;
     }
-    cout << ans << endl;
 
     return 0;
 }
