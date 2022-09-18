@@ -7,14 +7,15 @@ int main()
     cin >> t;
     for (int i = 0; i < t; i++)
     {
-        int x, y, z;
-        int ans;
-        cin >> x >> y >> z;
-        x *= 5;
-        y *= 10;
-        ans = (x + y) / z;
-
-        cout << ans << endl;
+        int e, n, c;
+        double b;
+        cin >> n >> e >> c;
+        b = double(n) / c;
+        cout << b << endl;
+        if (b <= e)
+            cout << "yes\n";
+        else
+            cout << "no\n";
     }
 
     return 0;
