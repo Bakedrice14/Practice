@@ -1,11 +1,15 @@
-
-        double ans;
-        cin >> x >> y >> z;
-        x *= 5;
-        y *= 10;
-        mod = (x + y) % z;
-        ans = double(x + y) / z;
-        ans = floor(ans);
+#include <iostream>
+using namespace std;
+int main(int argc, char const *argv[])
+{
+    int t;
+    while (t--)
+    {
+        int n, m, ans;
+        cin >> n >> m;
+        n *= 2;
+        m *= 4;
+        ans = n + m;
         cout << ans << endl;
     }
 

@@ -1,23 +1,17 @@
 #include <iostream>
-#include <bits/stdc++.h>
 using namespace std;
-int main()
+int main(int argc, char const *argv[])
 {
     int t;
     cin >> t;
-    for (int i = 0; i < t; i++)
+    while (t--)
     {
-        int n, k, ans;
-        cin >> n >> k;
-        ans = (k * (k + 1) / 2);
-        if (n >= ans)
-        {
-            cout << "yes" << endl;
-        }
-        else
-        {
-            cout << "no" << endl;
-        }
+        int n, m, ans;
+        cin >> n >> m;
+        n *= 2;
+        m *= 4;
+        ans = n + m;
+        cout << ans << endl;
     }
 
     return 0;
