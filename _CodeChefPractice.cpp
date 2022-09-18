@@ -1,21 +1,43 @@
 #include <iostream>
-#include <bits/stdc++.h>
 using namespace std;
-int main()
+
+int main(int argc, char const *argv[])
 {
-    int t;
-    cin >> t;
-    for (int i = 0; i < t; i++)
+
+    int x;
+    cin >> x;
+    while (x--)
     {
-        int x, y, ans;
-        cin >> x >> y;
-        if (y <= x * 10)
+        int a;
+        int y = 0;
+        string b;
+
+        cin >> a;
+        cin >> b;
+
+        for (int i = 0; i < a; i++)
         {
-            cout << "cloth" << endl;
+
+            if (b[i] != 'a' && b[i] != 'i' && b[i] != 'u' && b[i] != 'e' && b[i] != 'o')
+            {
+                y++;
+                if (y >= 4)
+                {
+                    break;
+                }
+            }
+            else
+            {
+                y = 0;
+            }
+        }
+        if (y >= 4)
+        {
+            cout << "NO" << endl;
         }
         else
         {
-            cout << "disposable\n";
+            cout << "YES" << endl;
         }
     }
 
