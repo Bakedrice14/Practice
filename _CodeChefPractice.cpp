@@ -7,15 +7,17 @@ int main()
     cin >> t;
     for (int i = 0; i < t; i++)
     {
-        int e, n, c;
-        double b;
-        cin >> n >> e >> c;
-        b = double(n) / c;
-        cout << b << endl;
-        if (b <= e)
-            cout << "yes\n";
+        int n, k, ans;
+        cin >> n >> k;
+        ans = (k * (k + 1) / 2);
+        if (n >= ans)
+        {
+            cout << "yes" << endl;
+        }
         else
-            cout << "no\n";
+        {
+            cout << "no" << endl;
+        }
     }
 
     return 0;
