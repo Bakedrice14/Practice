@@ -16,7 +16,7 @@ int main(int argc, char const *argv[])
     cin >> t;
     while (t--)
     {
-        int x, terminate, div, length = intLength(x);
+        int x, terminated, div, length = intLength(x);
         cin >> x;
         int num = x;
         int num2 = x;
@@ -31,8 +31,8 @@ int main(int argc, char const *argv[])
                 inc++;
                 cout << inc << endl;
             }
-            terminate = div * pangkat;
-            num2 -= terminate;
+            terminated = div * pangkat;
+            num2 -= terminated;
             length--;
         }
     }
