@@ -8,33 +8,33 @@ int intLength(int number)
         num /= 10;
         length++;
     }
-    return length;
 }
-int main(int argc, char const *argv[])
+int main()
 {
     int t;
     cin >> t;
     while (t--)
     {
-        int x, terminated, div, length = intLength(x);
+        int x, inc = 0, div = 1;
         cin >> x;
-        int num = x;
-        int num2 = x;
-        int inc = 0;
-
+        int terminated = 1;
+        int length = intLength(x);
         for (int i = 0; i < intLength(x); i++)
         {
-            int pangkat = 10 * length; // membuat 10 pangkat berapa untuk membagi angka
-            div = num / pangkat;       // membagi bilangan dengan variabel pangkat
-            if (div == 4)              // mencari apakah angka pada bilangan tertentu merupakan angka 4
+            int pangkat = 10 * length;
+            div = x / pangkat;
+
+            if (div == 4)
             {
                 inc++;
-                cout << inc << endl;
+                // cout << inc << endl
+                //      << endl;
             }
             terminated = div * pangkat;
-            num2 -= terminated;
+            x -= terminated;
             length--;
         }
+        cout << inc << endl;
     }
     return 0;
 }

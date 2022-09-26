@@ -1,22 +1,29 @@
 #include <iostream>
 using namespace std;
 
-int main(int argc, char const *argv[])
+int main()
 {
-    int pangkat, div, num, inc = 0, terminated, length = 5;
-    for (int i = 0; i < 5; i++)
+    int x;
+    cin >> x;
+
+    while (x--)
     {
-        pangkat = 10 * length; // membuat 10 pangkat berapa untuk membagi angka
-        div = num / pangkat;   // membagi bilangan dengan variabel pangkat
-        terminated = div * pangkat;
-        num -= terminated;
-        length--;
-        if (div == 4) // mencari apakah angka pada bilangan tertentu merupakan angka 4
+        string y;
+        cin >> y;
+
+        int z;
+        int a = 0;
+        z = y.length();
+
+        for (int i = 0; i <= z; i++)
         {
-            inc++;
-            cout << inc << endl;
+
+            if (y[i] == '4')
+            {
+                a++;
+            }
         }
+
+        cout << a << endl;
     }
-    cout << inc << endl;
-    return 0;
 }
