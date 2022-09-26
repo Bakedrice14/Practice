@@ -1,40 +1,29 @@
 #include <iostream>
 using namespace std;
-int intLength(int number)
-{
-    int length = 0, num = number;
-    while (num)
-    {
-        num /= 10;
-        length++;
-    }
-}
+
 int main()
 {
-    int t;
-    cin >> t;
-    while (t--)
-    {
-        int x, inc = 0, div = 1;
-        cin >> x;
-        int terminated = 1;
-        int length = intLength(x);
-        for (int i = 0; i < intLength(x); i++)
-        {
-            int pangkat = 10 * length;
-            div = x / pangkat;
+    int x;
+    cin >> x;
 
-            if (div == 4)
+    while (x--)
+    {
+        string y;
+        cin >> y;
+
+        int z;
+        int a = 0;
+        z = y.length();
+
+        for (int i = 0; i <= z; i++)
+        {
+
+            if (y[i] == '4')
             {
-                inc++;
-                // cout << inc << endl
-                //      << endl;
+                a++;
             }
-            terminated = div * pangkat;
-            x -= terminated;
-            length--;
         }
-        cout << inc << endl;
+
+        cout << a << endl;
     }
-    return 0;
 }
