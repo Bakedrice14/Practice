@@ -1,29 +1,22 @@
+// buatlah perhitungan faktorial dengan menggunakan konsep rekursif
 #include <iostream>
 using namespace std;
-
-int main()
+int faktorial(int num)
 {
-    int x;
-    cin >> x;
-
-    while (x--)
+    if (num > 1)
     {
-        string y;
-        cin >> y;
-
-        int z;
-        int a = 0;
-        z = y.length();
-
-        for (int i = 0; i <= z; i++)
-        {
-
-            if (y[i] == '4')
-            {
-                a++;
-            }
-        }
-
-        cout << a << endl;
+        return num * faktorial(num - 1);
     }
+    else
+    {
+        return 1;
+    }
+}
+int main(int argc, char const *argv[])
+{
+    int num;
+    cin >> num;
+    cout << faktorial(num);
+
+    return 0;
 }
